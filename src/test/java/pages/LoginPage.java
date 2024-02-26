@@ -49,16 +49,14 @@ public class LoginPage extends BasePage{
     }
 
 
-    public LoginPage clickByRegistrationButton(){ // Этот метод кликает по кнопке регистрации на веб-странице.
-        // Он вызывает метод click() для registrationButton.
-        registrationButton.click();
-        return this; // Затем он также возвращает объект LoginPage, чтобы этот метод также можно было использовать в цепочке вызовов.
-    }
-
     public LoginPage clickByLoginButton(){ // Этот метод кликает по кнопке логина на веб-странице.
         // Он вызывает метод click() для loginButton.
         loginButton.click();
         return this; // Затем он также возвращает объект LoginPage, чтобы этот метод также можно было использовать в цепочке вызовов.
     }
 
+    public LoginPage clickByRegistartionBUtton() {
+        registrationButton.click();
+        return this;
+    }
 }
