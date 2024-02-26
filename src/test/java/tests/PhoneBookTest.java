@@ -14,7 +14,7 @@ public class PhoneBookTest extends BaseTest {
     public void phoneBookTest_001(String browser) throws InterruptedException {
         MainPage mainPage = new MainPage(getDriver());
         LoginPage loginPage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
-        loginPage.fillEmailField("yanhik-03@mail.ru").clickByRegistartionBUtton();
+        loginPage.fillEmailField("yanhik03@mail.ru").clickByRegistartionBUtton();
         Thread.sleep(5000);
 
     }
