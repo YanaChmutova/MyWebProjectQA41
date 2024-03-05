@@ -14,28 +14,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginPage extends BasePage{
-    @FindBy(xpath = "//input[@name='email']") // Эта строка использует аннотацию @FindBy для поиска
-    // веб-элемента на веб-странице с помощью XPath-выражения. В данном случае, элемент найден по XPath,
-    // который ищет <input> элемент с атрибутом name, равным "email".
+    @FindBy(xpath = "//input[@name='email']") // Эта строка использует аннотацию @FindBy для поиска веб-элемента на веб-странице с помощью XPath-выражения. В данном случае, элемент найден по XPath, который ищет <input> элемент с атрибутом name, равным "email".
     // Найденный элемент сохраняется в переменной emailField типа WebElement.
     WebElement emailField;
 
-    @FindBy(xpath = "//input[@name='password']") //Эта строка использует аннотацию @FindBy для поиска
-    // веб-элемента на веб-странице с помощью XPath-выражения. В данном случае, элемент найден по XPath,
-    // который ищет <input> элемент с атрибутом name, равным "password".
-    // Найденный элемент сохраняется в переменной passwordField типа WebElement.
-    WebElement passwordField;
-
-    @FindBy(xpath = "//button[@name='registration']") //Эта строка использует аннотацию @FindBy для поиска
-    // веб-элемента на веб-странице с помощью XPath-выражения. В данном случае, элемент найден по XPath,
-    // который ищет <button> элемент с атрибутом name, равным "registration".
-    // Найденный элемент сохраняется в переменной registrationField типа WebElement.
+    @FindBy(xpath = "//button[@name='registration']")
     WebElement registrationButton;
 
-    @FindBy(xpath = "//button[@name='login']") //Эта строка использует аннотацию @FindBy для поиска
-    // веб-элемента на веб-странице с помощью XPath-выражения. В данном случае, элемент найден по XPath,
-    // который ищет <button> элемент с атрибутом name, равным "login".
-    // Найденный элемент сохраняется в переменной loginField типа WebElement.
+    @FindBy(xpath = "//input[@name='password']")
+    WebElement passwordField;
+
+    @FindBy(xpath = "//button[@name='login']")
     WebElement loginButton;
 
     public LoginPage(WebDriver driver){
@@ -48,33 +37,37 @@ public class LoginPage extends BasePage{
         emailField.sendKeys(email);
         return  this;  // Затем метод возвращает объект LoginPage, что позволяет использовать этот метод в цепочке вызовов
     }
-    public LoginPage fillPasswordField(String password){ // Этот метод заполняет поле пароля на веб-странице.
-        // Он принимает строку password, переданную в качестве аргумента, и использует метод sendKeys(),
-        // чтобы ввести эту строку в поле passwordField.
-       passwordField.sendKeys(password);
-        return  this;  // Затем метод возвращает объект LoginPage, что позволяет использовать этот метод в цепочке вызовов
+
+    public Alert clickByRegistartionButton(){ // Этот метод кликает по кнопке регистрации на веб-странице.
+        // Он вызывает метод click() для registrationButton.
+        registrationButton.click();
+        return getAlertIfPresent(); // Затем он также возвращает объект LoginPage, чтобы этот метод также можно было использовать в цепочке вызовов.
     }
 
-    public LoginPage clickByRegistartionBUtton() {
-        registrationButton.click();
+    public LoginPage fillPasswordField(String password){
+        passwordField.sendKeys(password);
         return this;
     }
+
     public BasePage clickByLoginButton(){
         loginButton.click();
         Alert alert = getAlertIfPresent();
-        if(alert!=null){
+        if(alert != null){
             alert.accept();
             return new LoginPage(driver);
-        } else {return new ContactsPage(driver);
+        }else {return new ContactsPage(driver);
         }
+
     }
     private Alert getAlertIfPresent(){
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
             return wait.until(ExpectedConditions.alertIsPresent());
         }catch(TimeoutException e){
-            System.out.println("Allert issue " +e);
-            return null;
+            System.out.println("Alert issue "+e);
+            return  null;
         }
+
     }
+
 }
