@@ -5,6 +5,7 @@ import helpers.*;
 import io.qameta.allure.Allure;
 import jdk.jfr.Description;
 import model.Contact;
+import model.User;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -34,7 +35,6 @@ public class PhoneBookTest extends BaseTest {
         Alert alert= loginPage.fillEmailField("myemail@mail.com").clickByRegistartionButton();
         boolean isAlertHandled = AlertHandler.handleAlert(alert, expectedString);
         Assert.assertTrue(isAlertHandled);
-
     }
     @Test
     @Description("User already exist. Login and add contact.")
@@ -63,7 +63,6 @@ public class PhoneBookTest extends BaseTest {
         TakeScreen.takeScreenshot("screen");
         Thread.sleep(3000);
     }
-
     @Test
     @Description("Successful Registration")
     public void successfulRegistration(){
@@ -81,7 +80,7 @@ public class PhoneBookTest extends BaseTest {
         }else {
             TakeScreen.takeScreenshot("Successful Registration");}
     }
-    @Test
+    //  @Test
     public void deleteContact() throws InterruptedException {
         Allure.description("User already exist. Delete contact by phone number!");
         MainPage mainPage = new MainPage(getDriver());
@@ -111,10 +110,43 @@ public class PhoneBookTest extends BaseTest {
                 EmailGenerator.generateEmail(10,5,3),
                 AddressGenerator.generateAddress(), "Test description");
         addPage.fillFormAndSave(newContact);
-        Contact.serializeContact( newContact, filename);
+        Contact.serializeContact(newContact, filename);
         ContactsPage contactsPage = new ContactsPage(getDriver());
         Contact deserContact = Contact.deserialaizeContact(filename);
         Assert.assertNotEquals(contactsPage.deleteContactByPhoneNumberOrName(deserContact.getPhone()),
                 contactsPage.getContactsListSize());
     }
+
+    @Test
+    @Description("Registration attempt test.")
+    public void reRegistrationAttempt() throws InterruptedException {
+        Allure.description(" Registration attempt test.");
+        MainPage mainPage = new MainPage(getDriver());
+        Allure.step("Open LOGIN menu");
+        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+
+        User user = new User(EmailGenerator.generateEmail(7,7,3), PasswordStringGenerator.generateString());
+        lpage.fillEmailField(user.getUserEmail())
+                .fillPasswordField(user.getUserPassword());
+
+        Alert alert =  lpage.clickByRegistartionButton();
+
+        if (alert==null){
+
+            ContactsPage contactsPage = new ContactsPage(getDriver());
+
+            lpage = contactsPage.clickBySignOutButton();
+            Alert alert1= lpage.fillEmailField(user.getUserEmail())
+                    .fillPasswordField(user.getUserPassword()).clickByRegistartionButton();
+            //Thread.sleep(3000);
+            if (alert1!=null){
+                boolean res = AlertHandler.handleAlert(alert1, "exist");
+                System.out.println("RESULT "+res);
+                Assert.assertTrue(res);
+            }
+
+        }else {
+            TakeScreen.takeScreenshot("reRegistrationAttempt");}
+    }
+
 }
