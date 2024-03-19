@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="279fcfde-2172-4d66-b490-17928e585517" name="Changes" comment="findRowByValue, findRowByValueLambda,rightMouseClick" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;YanaChmutova&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a8d991e2-c385-4c03-8a04-d8f6f9e52fb6" />
+        <option name="url" value="https://github.com/YanaChmutova/MyWebProjectQA41.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2cdqEH12lOkxuSNLY5KfmDfRuM9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.AddressGenerator.executor": "Run",
+    "Application.AssertionTest.executor": "Run",
+    "Application.EmailGenerator.executor": "Run",
+    "Application.PasswordStringGenerator.executor": "Run",
+    "Application.PhoneNumberGenerator.executor": "Run",
+    "Application.PropertiesWriter.executor": "Run",
+    "Application.WindowAndTabTests.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.AssertionTest.myTest.executor": "Run",
+    "TestNG.AssertionTest.test2.executor": "Run",
+    "TestNG.AssertionTest.testCalc.executor": "Run",
+    "TestNG.C:/Users/yana/Documents/Projects/MyWebProjectQA41/testng.xml.executor": "Run",
+    "TestNG.MyFirstStartChrome.test_start.executor": "Run",
+    "TestNG.PhoneBookTest.deleteContactApproachTwo.executor": "Run",
+    "TestNG.PhoneBookTest.executor": "Run",
+    "TestNG.PhoneBookTest.loginOfAnExistingUserAddContact.executor": "Run",
+    "TestNG.PhoneBookTest.phoneBookTest_001.executor": "Run",
+    "TestNG.PhoneBookTest.registrationWithoutPassword.executor": "Run",
+    "TestNG.WindowAndTabTests.dragAndDropTest.executor": "Run",
+    "TestNG.WindowAndTabTests.findRowByValue.executor": "Run",
+    "TestNG.WindowAndTabTests.sliderTest.executor": "Run",
+    "TestNG.WindowAndTabTests.waitForAnElement.executor": "Run",
+    "git-widget-placeholder": "mybranch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/yana/Documents/Projects/MyWebProjectQA41",
+    "onboarding.tips.debug.path": "C:/Users/yana/Documents/Projects/MyWebProjectQA41/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.WindowAndTabTests">
+    <configuration name="WindowAndTabTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
+      <module name="MyWebProjectQA41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhoneBookTest.deleteContactApproachTwo" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyWebProjectQA41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
+      <option name="METHOD_NAME" value="deleteContactApproachTwo" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WindowAndTabTests.dragAndDropTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyWebProjectQA41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
+      <option name="METHOD_NAME" value="dragAndDropTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WindowAndTabTests.findRowByValue" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyWebProjectQA41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
+      <option name="METHOD_NAME" value="findRowByValue" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WindowAndTabTests.waitForAnElement" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyWebProjectQA41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
+      <option name="METHOD_NAME" value="waitForAnElement" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WindowAndTabTests" />
+        <item itemvalue="TestNG.WindowAndTabTests.findRowByValue" />
+        <item itemvalue="TestNG.WindowAndTabTests.waitForAnElement" />
+        <item itemvalue="TestNG.PhoneBookTest.deleteContactApproachTwo" />
+        <item itemvalue="TestNG.WindowAndTabTests.dragAndDropTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="279fcfde-2172-4d66-b490-17928e585517" name="Changes" comment="" />
+      <created>1708451693860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708451693860</updated>
+    </task>
+    <task id="LOCAL-00001" summary="pages">
+      <option name="closed" value="true" />
+      <created>1708961719389</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708961719389</updated>
+    </task>
+    <task id="LOCAL-00002" summary="pages">
+      <option name="closed" value="true" />
+      <created>1708965125845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708965125845</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1708965171505</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708965171505</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1708965249746</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708965249746</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1708965448390</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708965448390</updated>
+    </task>
+    <task id="LOCAL-00006" summary="pom, allure.properties">
+      <option name="closed" value="true" />
+      <created>1709466247079</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709466247080</updated>
+    </task>
+    <task id="LOCAL-00007" summary="pom, allure.properties">
+      <option name="closed" value="true" />
+      <created>1709665736324</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709665736324</updated>
+    </task>
+    <task id="LOCAL-00008" summary="WindowAndTabTests">
+      <option name="closed" value="true" />
+      <created>1710491330209</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710491330209</updated>
+    </task>
+    <task id="LOCAL-00009" summary="findRowByValue, findRowByValueLambda,rightMouseClick">
+      <option name="closed" value="true" />
+      <created>1710680283720</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710680283721</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pages" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="pom, allure.properties" />
+    <MESSAGE value="WindowAndTabTests" />
+    <MESSAGE value="findRowByValue, findRowByValueLambda,rightMouseClick" />
+    <option name="LAST_COMMIT_MESSAGE" value="findRowByValue, findRowByValueLambda,rightMouseClick" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
