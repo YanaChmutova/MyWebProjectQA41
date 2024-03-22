@@ -21,7 +21,7 @@ import java.io.IOException;
 
 public class PhoneBookTest extends BaseTest {
 
-    @Test(description = "The test checks the empty field warning declaration.")
+    @Test(description = "The test checks the empty field warning declaration.", retryAnalyzer = RetryAnalizer.class)
     @Parameters("browser")
     public void registrationWithoutPassword(@Optional("chrome") String browser) throws InterruptedException {
         Allure.description("User already exist. Login and add contact.!");
@@ -36,7 +36,7 @@ public class PhoneBookTest extends BaseTest {
         boolean isAlertHandled = AlertHandler.handleAlert(alert, expectedString);
         Assert.assertTrue(isAlertHandled);
     }
-    @Test
+    @Test(retryAnalyzer = RetryAnalizer.class)
     @Description("User already exist. Login and add contact.")
     public void loginOfAnExistingUserAddContact() throws InterruptedException {
         Allure.description("User already exist. Login and add contact.!");
@@ -119,34 +119,32 @@ public class PhoneBookTest extends BaseTest {
 
     @Test
     @Description("Registration attempt test.")
-    public void reRegistrationAttempt() throws InterruptedException {
-        Allure.description(" Registration attempt test.");
+    public void reRegistrationAttempt() {
+        boolean res = false;
+        Allure.description("Registration attempt test.");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Open LOGIN menu");
         LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
 
-        User user = new User(EmailGenerator.generateEmail(7,7,3), PasswordStringGenerator.generateString());
+        User user = new User(EmailGenerator
+                .generateEmail(7, 7, 3), PasswordStringGenerator.generateString());
+
         lpage.fillEmailField(user.getUserEmail())
                 .fillPasswordField(user.getUserPassword());
-
-        Alert alert =  lpage.clickByRegistartionButton();
-
-        if (alert==null){
-
+        Alert alert = lpage.clickByRegistartionButton();
+        if (alert == null) {
             ContactsPage contactsPage = new ContactsPage(getDriver());
-
             lpage = contactsPage.clickBySignOutButton();
-            Alert alert1= lpage.fillEmailField(user.getUserEmail())
+            Alert alert1 = lpage.fillEmailField(user.getUserEmail())
                     .fillPasswordField(user.getUserPassword()).clickByRegistartionButton();
-            //Thread.sleep(3000);
-            if (alert1!=null){
-                boolean res = AlertHandler.handleAlert(alert1, "exist");
-                System.out.println("RESULT "+res);
-                Assert.assertTrue(res);
+            if (alert1 != null) {
+                res = AlertHandler.handleAlert(alert1, "exist");
             }
-
-        }else {
-            TakeScreen.takeScreenshot("reRegistrationAttempt");}
+        } else {
+            System.out.println("reRegistrationAttempt");
+        }
+        Assert.assertTrue(res, "Registration attempt failed");
     }
+
 
 }
